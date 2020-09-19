@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { getCourses } from "../api/courseApi";
-import  CourseList  from "./CourseList";
+import CourseList from "./CourseList";
+import { Link } from "react-router-dom";
 
 const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
     getCourses().then((_courses) => setCourses(_courses));
-  },[]);
+  }, []);
 
   return (
     <>
-      {" "}
       <h2>Courses</h2>
-      <CourseList courses={courses}/>
-      
+      <Link className="btn btn-primary" to="manage">
+        Add Course
+      </Link>
+      <CourseList courses={courses} />
     </>
   );
 };
