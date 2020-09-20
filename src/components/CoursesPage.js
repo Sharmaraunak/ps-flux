@@ -6,7 +6,7 @@ import { loadCourses } from "../actions/courseAction";
 import { Link } from "react-router-dom";
 
 const CoursesPage = () => {
-  const [courses, setCourses] = useState([]);
+  const [courses, setCourses] = useState(CourseStore.getCourses());
 
   useEffect(() => {
     CourseStore.addChangeListener(onChange);
