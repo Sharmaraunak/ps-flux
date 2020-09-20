@@ -4,6 +4,7 @@ const jsonServer = require('json-server');
 
 const server = jsonServer.create();
 const path = require("path");
+const { send } = require('process');
 const router = jsonServer.router(path.join(__dirname,"db.json"));
 
 
@@ -34,7 +35,7 @@ server.use((req,res,next) => {
 server.post("/courses/", function(req,res,next){
     const error = validateCourse(req.body);
     if(error){
-        req.status(400).send(error);
+        req.statusCode(400).send(error);
     }else{
         req.body.slug = createSlug(req.body.title);
         next();

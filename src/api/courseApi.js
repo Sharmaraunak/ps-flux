@@ -7,7 +7,7 @@ export const getCourses = () => {
   return fetch(baseUrl).then(handleResponse).catch(handleError);
 };
 
-export const getCoursesBySlug = (slug) => {
+export const getCoursesBySlug = slug => {
   return fetch(baseUrl + "?slug=" + slug)
     .then((response) => {
       if (!response.ok) throw new Error("Network response was not ok.");
