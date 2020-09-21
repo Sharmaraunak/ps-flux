@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CourseList = ({ courses }) => {
+const CourseList = ({ courses, deleteCourse }) => {
   return (
     <table className=" table table-bordered table-hover">
       <thead className="thead-dark">
@@ -9,6 +9,7 @@ const CourseList = ({ courses }) => {
           <th>Title</th>
           <th>Author ID</th>
           <th>Category</th>
+          <th>&nbsp;</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +21,14 @@ const CourseList = ({ courses }) => {
               </td>
               <td>{course.authorId}</td>
               <td>{course.category}</td>
+              <td>
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={() => deleteCourse(course.id)}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           );
         })}

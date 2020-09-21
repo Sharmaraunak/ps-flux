@@ -1,13 +1,6 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "React-js Fundamentals",
-      "slug": "framework-designs",
-      "authorId": 1,
-      "category": "Javascript"
-    },
-    {
       "id": 2,
       "title": "JavaScript Fundamentals",
       "slug": "language",
@@ -68,28 +61,12 @@
       "createdAt": 1600514464505
     },
     {
-      "id": 10,
-      "title": "asdf",
-      "category": "asdfg",
+      "id": 16,
+      "title": "Rambo",
+      "category": "Fiction",
       "authorId": 2,
-      "slug": "asdf",
-      "createdAt": 1600564552512
-    },
-    {
-      "id": 11,
-      "title": "A Beautiful Mid",
-      "category": "Science",
-      "authorId": 3,
-      "slug": "a-beautiful-mid",
-      "createdAt": 1600578051608
-    },
-    {
-      "id": 12,
-      "title": "raunak",
-      "category": "BIO",
-      "authorId": 1,
-      "slug": "raunak",
-      "createdAt": 1600578554276
+      "slug": "rambo",
+      "createdAt": 1600661533954
     }
   ],
   "authors": [

@@ -33,8 +33,8 @@ export const saveCourse = (course) => {
     .catch(handleError);
 };
 
-export const deleteCourse = (course) => {
-  return fetch(baseUrl + course.id, { method: "DELETE" })
+export const deleteCourse = (id) => {
+  return fetch(baseUrl + id, { method: "DELETE" })
     .then(handleResponse)
     .catch(handleError);
 };
